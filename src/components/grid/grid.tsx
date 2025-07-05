@@ -11,27 +11,32 @@ export interface GridProps extends React.PropsWithChildren {
     verticalAlignment?: Enum.VerticalAlignment;
 }
 
-export const Grid = forwardRef<UIGridLayout, GridProps>(({
-    children,
-    cellPadding,
-    cellSize,
-    fillDirection,
-    fillDirectionMaxCells,
-    sortOrder,
-    startCorner,
-    horizontalAlignment,
-    verticalAlignment,
-}, ref) => (
-    <uigridlayout
-    ref={ref}
-    CellPadding={cellPadding}
-    CellSize={cellSize}
-    FillDirection={fillDirection}
-    FillDirectionMaxCells={fillDirectionMaxCells}
-    SortOrder={sortOrder}
-    StartCorner={startCorner}
-    HorizontalAlignment={horizontalAlignment}
-    VerticalAlignment={verticalAlignment}
-    children={children}
-    />
-))
+export const Grid = forwardRef<UIGridLayout, GridProps>(
+    (
+        {
+            children,
+            cellPadding,
+            cellSize,
+            fillDirection,
+            fillDirectionMaxCells,
+            sortOrder,
+            startCorner,
+            horizontalAlignment,
+            verticalAlignment,
+        },
+        ref,
+    ) => (
+        <uigridlayout
+            ref={ref}
+            CellPadding={cellPadding}
+            CellSize={cellSize}
+            FillDirection={fillDirection}
+            FillDirectionMaxCells={fillDirectionMaxCells}
+            SortOrder={sortOrder}
+            StartCorner={startCorner}
+            HorizontalAlignment={horizontalAlignment}
+            VerticalAlignment={verticalAlignment}
+            children={children}
+        />
+    ),
+);

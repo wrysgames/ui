@@ -10,8 +10,8 @@
         "format": "prettier --write ."
     },
     "exports": {
-        ".": "./src/index.ts",
-        "./components": "./src/components/index.ts"
+        ".": "./out/init.luau",
+        "./components": "./out/components/init.luau"
     },
     "keywords": [],
     "author": "",
