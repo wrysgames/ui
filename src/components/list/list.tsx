@@ -1,7 +1,7 @@
 import React, { Binding, forwardRef } from "@rbxts/react";
 import { toUDim } from "utils/udim";
 
-export interface ListProps extends React.PropsWithChildren, React.PropsWithRef<UIListLayout> {
+export interface ListProps extends React.PropsWithChildren {
     /** Sets the padding between elements in the list */
     padding?: Binding<UDim> | Binding<number> | UDim | number;
 

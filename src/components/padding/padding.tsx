@@ -1,7 +1,7 @@
 import React, { Binding, forwardRef } from "@rbxts/react";
 import { toUDim } from "utils/udim";
 
-export interface PaddingProps extends React.PropsWithChildren, React.PropsWithRef<UIPadding> {
+export interface PaddingProps extends React.PropsWithChildren {
     /** Sets both horizontal padding (left + right) */
     paddingX?: Binding<UDim> | Binding<number> | UDim | number;
 
