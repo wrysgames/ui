@@ -9,6 +9,10 @@
         "prepublishOnly": "pnpm run build",
         "format": "prettier --write ."
     },
+    "exports": {
+        ".": "./src/index.ts",
+        "./components": "./src/components/index.ts"
+    },
     "keywords": [],
     "author": "",
     "license": "ISC",

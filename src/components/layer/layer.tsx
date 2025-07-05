@@ -5,21 +5,26 @@ export interface LayerProps extends React.PropsWithChildren {
     ignoreGuiInset?: boolean;
     zIndexBehavior?: Enum.ZIndexBehavior;
     resetOnSpawn?: boolean;
-};
+}
 
-export const Layer = React.forwardRef<ScreenGui, LayerProps>(({
-    children,
-    displayOrder = 0,
-    ignoreGuiInset = true,
-    zIndexBehavior = Enum.ZIndexBehavior.Sibling,
-    resetOnSpawn = false,
-}, ref) => (
-    <screengui
-    DisplayOrder={displayOrder}
-    IgnoreGuiInset={ignoreGuiInset}
-    ZIndexBehavior={zIndexBehavior}
-    ResetOnSpawn={resetOnSpawn}
-    ref={ref}
-    children={children}
-    />
-))
+export const Layer = React.forwardRef<ScreenGui, LayerProps>(
+    (
+        {
+            children,
+            displayOrder = 0,
+            ignoreGuiInset = true,
+            zIndexBehavior = Enum.ZIndexBehavior.Sibling,
+            resetOnSpawn = false,
+        },
+        ref,
+    ) => (
+        <screengui
+            DisplayOrder={displayOrder}
+            IgnoreGuiInset={ignoreGuiInset}
+            ZIndexBehavior={zIndexBehavior}
+            ResetOnSpawn={resetOnSpawn}
+            ref={ref}
+            children={children}
+        />
+    ),
+);

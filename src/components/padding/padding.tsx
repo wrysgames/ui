@@ -21,21 +21,15 @@ export interface PaddingProps extends React.PropsWithChildren {
     paddingRight?: Binding<UDim> | Binding<number> | UDim | number;
 }
 
-export const Padding = forwardRef<UIPadding, PaddingProps>(({
-    children,
-    paddingX,
-    paddingY,
-    paddingTop,
-    paddingBottom,
-    paddingLeft,
-    paddingRight,
-}, ref) => (
-    <uipadding
-    ref={ref}
-    PaddingTop={toUDim(paddingTop ?? paddingY ?? 0)}
-    PaddingBottom={toUDim(paddingBottom ?? paddingY ?? 0)}
-    PaddingLeft={toUDim(paddingLeft ?? paddingX ?? 0)}
-    PaddingRight={toUDim(paddingRight ?? paddingX ?? 0)}
-    children={children}
-    />
-));
+export const Padding = forwardRef<UIPadding, PaddingProps>(
+    ({ children, paddingX, paddingY, paddingTop, paddingBottom, paddingLeft, paddingRight }, ref) => (
+        <uipadding
+            ref={ref}
+            PaddingTop={toUDim(paddingTop ?? paddingY ?? 0)}
+            PaddingBottom={toUDim(paddingBottom ?? paddingY ?? 0)}
+            PaddingLeft={toUDim(paddingLeft ?? paddingX ?? 0)}
+            PaddingRight={toUDim(paddingRight ?? paddingX ?? 0)}
+            children={children}
+        />
+    ),
+);

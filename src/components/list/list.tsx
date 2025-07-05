@@ -19,29 +19,34 @@ export interface ListProps extends React.PropsWithChildren {
     itemLineAlignment?: Enum.ItemLineAlignment;
 }
 
-export const List = forwardRef<UIListLayout, ListProps>(({
-    children,
-    padding = 0,
-    axis = "horizontal",
-    sortOrder,
-    wraps,
-    horizontalAlignment,
-    horizontalFlex,
-    verticalAlignment,
-    verticalFlex,
-    itemLineAlignment,
-}, ref) => (
-    <uilistlayout
-    ref={ref}
-    FillDirection={axis === "horizontal" ? Enum.FillDirection.Horizontal : Enum.FillDirection.Vertical}
-    Padding={toUDim(padding ?? 0)}
-    HorizontalAlignment={horizontalAlignment}
-    HorizontalFlex={horizontalFlex}
-    VerticalAlignment={verticalAlignment}
-    VerticalFlex={verticalFlex}
-    SortOrder={sortOrder}
-    Wraps={wraps}
-    ItemLineAlignment={itemLineAlignment}
-    children={children}
-    />
-));
+export const List = forwardRef<UIListLayout, ListProps>(
+    (
+        {
+            children,
+            padding = 0,
+            axis = "horizontal",
+            sortOrder,
+            wraps,
+            horizontalAlignment,
+            horizontalFlex,
+            verticalAlignment,
+            verticalFlex,
+            itemLineAlignment,
+        },
+        ref,
+    ) => (
+        <uilistlayout
+            ref={ref}
+            FillDirection={axis === "horizontal" ? Enum.FillDirection.Horizontal : Enum.FillDirection.Vertical}
+            Padding={toUDim(padding ?? 0)}
+            HorizontalAlignment={horizontalAlignment}
+            HorizontalFlex={horizontalFlex}
+            VerticalAlignment={verticalAlignment}
+            VerticalFlex={verticalFlex}
+            SortOrder={sortOrder}
+            Wraps={wraps}
+            ItemLineAlignment={itemLineAlignment}
+            children={children}
+        />
+    ),
+);
