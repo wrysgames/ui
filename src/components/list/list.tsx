@@ -8,7 +8,7 @@ export interface ListProps extends React.PropsWithChildren {
     /** Sets the list to be either `horizontal` or `vertical` */
     axis?: "horizontal" | "vertical";
     sortOrder?: Enum.SortOrder;
-    wraps?: boolean;
+    wraps?: boolean | Binding<boolean>;
 
     horizontalAlignment?: Enum.HorizontalAlignment;
     horizontalFlex?: Enum.UIFlexAlignment;

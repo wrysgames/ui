@@ -1,5 +1,5 @@
 {
-    "name": "@rbxts/ui-toolkit",
+    "name": "@rbxts/ui",
     "version": "1.0.0",
     "description": "",
     "main": "out/init.lua",

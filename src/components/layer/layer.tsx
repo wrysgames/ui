@@ -1,10 +1,10 @@
-import React from "@rbxts/react";
+import React, { Binding } from "@rbxts/react";
 
 export interface LayerProps extends React.PropsWithChildren {
-    displayOrder?: number;
-    ignoreGuiInset?: boolean;
+    displayOrder?: number | Binding<number>;
+    ignoreGuiInset?: boolean | Binding<boolean>;
     zIndexBehavior?: Enum.ZIndexBehavior;
-    resetOnSpawn?: boolean;
+    resetOnSpawn?: boolean | Binding<boolean>;
 }
 
 export const Layer = React.forwardRef<ScreenGui, LayerProps>(

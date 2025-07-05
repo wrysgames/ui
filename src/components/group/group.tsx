@@ -10,7 +10,7 @@ import React, { type Binding, forwardRef } from "@rbxts/react";
 export interface GroupProps extends React.PropsWithChildren {
     position?: UDim2 | Binding<UDim2>;
     size?: UDim2 | Binding<UDim2>;
-    clipsDescendants?: boolean;
+    clipsDescendants?: boolean | Binding<boolean>;
 }
 
 /**
