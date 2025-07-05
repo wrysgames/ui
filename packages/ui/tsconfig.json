@@ -27,5 +27,11 @@
         "paths": {
             "utils/*": ["./src/utils/*"]
         }
-    }
+    },
+    "include": [
+        "src/**/*", "pkgs/ui/components", "pkgs/ui/utils", "pkgs/ui/index.ts",
+    ],
+    "exclude": [
+        "example/**/*"
+    ]
 }
